@@ -1,0 +1,16 @@
+.mybox {
+  background: green;
+  border: 5px solid purple;
+  border-radius: 10px;
+}
+
+#title {
+  font-size: 100px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.mybox img {
+  width: 300px;
+  height: 200px;
+}
