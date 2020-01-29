@@ -12,7 +12,12 @@ $qty = $_POST['qty'];
 $detail = $_POST['detail'];
 $gender = $_POST['gender'];
 
-$store = "INSERT INTO catelogs (title, qty, detail,gender) VALUES ('$name', '$qty', '$detail', '$gender')";
-mysqli_query($conn,$store);
+$store = "INSERT INTO catalogs (title, qty, detail,gender) VALUES ('$name', '$qty', '$detail', '$gender')";
+$query = mysqli_query($conn, $store);
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+
+if ($query) {
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+} else {
+    print 'error';
+}

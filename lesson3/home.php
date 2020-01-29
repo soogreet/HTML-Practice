@@ -12,13 +12,9 @@
 <body>
     <?php
     $conn = new mysqli('localhost', 'root', '', 'projectx');
-    $getdata = "SELECT * FROM catelogs";
+    $getdata = "SELECT * FROM catalogs";
     $result = mysqli_query($conn, $getdata);
-    $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    foreach($item as $yes): {
-        echo $yes;
-    }
-    endforeach
+    $item = mysqli_fetch_array($result);
     ?>
     <?php include('./navbar.php') ?>
     <?php include('./carousel.php') ?>
@@ -33,19 +29,20 @@
         </div>
         <hr>
         <div class="row">
-            <?php foreach ($item as $show): { ?>
+            <?php foreach ($item as $show) : { ?>
 
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./image/dog1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $show['title']; ?></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-warning form-control">แก้ไข</a>
+                    <div class="col-md-3">
+                        <div class="card" ;">
+                            <img src="./image/dog1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $show['id']; ?></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-warning form-control">แก้ไข</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php } endforeach  ?>
+            <?php }
+            endforeach  ?>
         </div>
     </div>
 </body>

@@ -48,9 +48,9 @@
                     <div class="form-group">
                         <label>เพศ</label>
                         <br>
-                        <input type="radio" name="gender"> ชาย
-                        <input type="radio" name="gender"> หญิง
-                        <input type="radio" name="gender"> อื่นๆ
+                        <input type="radio" name="gender" value="1"> ชาย
+                        <input type="radio" name="gender" value="2"> หญิง
+                        <input type="radio" name="gender" value="3"> อื่นๆ
                     </div>
                     <button type="submit" class="btn btn-success form-control">ยืนยัน/button>
                 </form>
